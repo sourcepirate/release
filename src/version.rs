@@ -10,8 +10,8 @@ pub enum SemType {
 impl SemType {
     pub fn incr_version(&self, version: Version) -> Version {
       match *self {
-          SemType::MAJOR => Version::new(version.major+1, version.minor, version.patch),
-          SemType::MINOR => Version::new(version.major, version.minor + 1, version.patch),
+          SemType::MAJOR => Version::new(version.major+1, 0, 0),
+          SemType::MINOR => Version::new(version.major, version.minor + 1, 0),
           SemType::PATCH => Version::new(version.major, version.minor, version.patch + 1)
       }
     }

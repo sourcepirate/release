@@ -1,6 +1,6 @@
 [package]
 name = "release"
-version = "0.8.0"
+version = "0.8.1"
 authors = ["sourcepirate <plasmashadowx@gmail.com>"]
 description = "Clean up your release git workflow"
 repository = "https://github.com/sourcepirate/release"
