@@ -1,4 +1,3 @@
-
 extern crate git2;
 extern crate regex;
 
@@ -23,10 +22,10 @@ fn main(){
             Ok(repo) => {
                 let mut release :Release = repo.release();
                 let vtype: SemType = SemType::select(args[1].clone());
-                release.incr(vtype);
+                release.make_release(vtype);
             },
             Err(E) => {
-                println!("Cannot open repo")
+                println!("Cannot open repo");
             }
         }
 
