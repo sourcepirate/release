@@ -1,0 +1,8 @@
+[package]
+name = "release"
+version = "0.1.0"
+authors = ["sourcepirate <plasmashadowx@gmail.com>"]
+
+[dependencies]
+git2 = "*"
+regex = "*"
