@@ -19,9 +19,16 @@ fn main(){
         println!("{}", USAGE);
     }
     else {
-        let mut repo = Release::repo(cwd).unwrap();
-        let mut release :Release = repo.release();
-        let vtype: SemType = SemType::select(args[1].clone());
-        release.incr(vtype);
+        match Release::repo(cwd){
+            Ok(repo) => {
+                let mut release :Release = repo.release();
+                let vtype: SemType = SemType::select(args[1].clone());
+                release.incr(vtype);
+            },
+            Err(E) => {
+                println!("Cannot open repo")
+            }
+        }
+
     }
 }

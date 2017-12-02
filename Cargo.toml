@@ -1,8 +1,12 @@
 [package]
 name = "release"
-version = "0.1.0"
+version = "0.5.0"
 authors = ["sourcepirate <plasmashadowx@gmail.com>"]
 
 [dependencies]
 git2 = "*"
 regex = "*"
+
+[[bin]]
+name = "release"
+path = "src/main.rs"

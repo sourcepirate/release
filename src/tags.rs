@@ -74,8 +74,10 @@ impl<'a> Release<'a> {
     }
 
     pub fn repo(p: PathBuf) -> Result<RepoController, Error>{
-        let mut repository = try!(Repository::open(p));
-        Ok(RepoController(repository))
+        match Repository::open(p) {
+            Ok(x) => Ok(RepoController(x)),
+            Err(E) => Err(E)
+        }
     }
 
     pub fn incr(&mut self, vtype: SemType) {
