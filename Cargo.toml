@@ -5,7 +5,6 @@ authors = ["sourcepirate <plasmashadowx@gmail.com>"]
 description = "Clean up your release git workflow"
 repository = "https://github.com/sourcepirate/release"
 readme = "README.md"
-categories = ["git", "workflow"]
 keywords = ["git"]
 license = "MIT"
 
