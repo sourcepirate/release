@@ -10,8 +10,8 @@ keywords = ["git"]
 license = "MIT"
 
 [dependencies]
-git2 = "*"
-regex = "*"
+git2 = "0.6.8"
+regex = "0.2.3"
 
 [[bin]]
 name = "release"
